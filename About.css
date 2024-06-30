@@ -1,0 +1,120 @@
+/* Importing Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Great+Vibes&family=Lexend+Deca:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Navigation Styles */
+.navbar {
+  display: flex;
+  background-color: #FFFFFF;
+  box-shadow: 0 -4px 17px #0b0421;
+  margin-bottom: 6px;
+  padding: 20px;
+}
+
+.navbar__lists {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.navbar__link {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  color: #000;
+  cursor: pointer;
+  transition: color 0.3s linear;
+}
+
+.navbar__link:hover {
+  color: #8f6c0c;
+}
+
+.logo { 
+  background-image: url("logo.png");
+  background-size: cover;
+  height: 50px;
+  width: 100px;
+  margin-right: auto;
+}
+
+/* Banner Styles */
+.banner {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  height: 700px;
+}
+
+.banner__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.banner__content { 
+  position: absolute;
+  left: 16%;
+  top: 20%;
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  animation: fadeIn 1s ease forwards;
+}
+
+.banner__title { 
+  font-family: Arial, sans-serif;
+  line-height: 40px;
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease 0.5s forwards;
+  opacity: 0;
+  color: #fff; /* Change text color to white */
+}
+
+.banner__description {
+  font-size: 20px;
+  font-family: Arial, sans-serif;
+  letter-spacing: 1px;
+  animation: fadeIn 1s ease 1s forwards;
+  opacity: 0;
+  color: #fff; /* Change text color to white */
+}
+
+/* Define keyframes for fadeIn animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
